@@ -12,6 +12,7 @@ import IPageProps from "../interfaces/page";
 import BlogPreview from "../components/BlogPreview";
 import IUser from "../interfaces/user";
 import ErrorText from "../components/ErrorText";
+import content from "./new.jpg";
 
 const HomePage: React.FunctionComponent<IPageProps> = props =>{
   const [blogs, setBlogs] = useState<IBlog[]>([]);
@@ -58,6 +59,12 @@ const HomePage: React.FunctionComponent<IPageProps> = props =>{
           title="Simple Blog Web"
           children={[]}
         />
+        <Container className="mt-5 flex flex-row" >
+           <img src={content} alt="" className="float-right" />
+           <h5 className="p-5">Blog is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. It is a platform where a writer or a group of writers share their views on an individual subject.
+           Let's make your own blog here, also you can see someone else blog!
+           </h5> 
+        </Container>
       <Container className="mt-5">
        { blogs.length === 0 && <p>There are no blogs yet, you should <Link to="/edit">post</Link> one</p>}
        {blogs.map((blog, index) => {
