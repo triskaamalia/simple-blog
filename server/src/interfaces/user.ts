@@ -1,6 +1,6 @@
-import { Document } from "mongoose"
+import { Document } from "mongoose";
 
-export default interface IUser extends Document{
+export default interface IUser extends Document {
   uid: string;
-  name: string;  
+  name: string;
 }
